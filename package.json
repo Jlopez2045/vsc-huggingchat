@@ -2,7 +2,9 @@
   "name": "vsc-huggingchat",
   "displayName": "HuggingChat",
   "description": "",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "publisher": "JLT",
+  "icon": "resources/icon.png",
   "engines": {
     "vscode": "^1.77.0"
   },

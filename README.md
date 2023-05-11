@@ -2,8 +2,10 @@
 
 Loads [HuggingChat](https://huggingface.co/chat) in Visual Studio Code sidebar.
 
-![Sidebar](./screenshots/sidebar.png)
+![Sidebar](https://raw.githubusercontent.com/Jlopez2045/vsc-huggingchat/main/screenshots/sidebar.png)
 ## Release Notes
+### 1.0.1
+1. Fix bugs
 ### 1.0.0
 1. intial release
 
