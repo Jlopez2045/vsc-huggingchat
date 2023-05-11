@@ -1,0 +1,77 @@
+{
+  "name": "vsc-huggingchat",
+  "displayName": "HuggingChat",
+  "description": "",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:huggingchatView"
+  ],
+  "repository": "https://github.com/Jlopez2045/vsc-huggingchat",
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "huggingchat.refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "huggingchat",
+          "title": "HuggingChat",
+          "icon": "resources/logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "huggingchat": [
+        {
+          "id": "huggingchatView",
+          "type": "webview",
+          "name": ""
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "huggingchat.refresh",
+          "when": "view == huggingchatView",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "postcompile": "npm run copy-resources",
+    "copy-resources": "copyfiles -u 1 \"./resources/**/*.*\" ./out",
+    "setup-ts": "yarn plugin import typescript && yarn dlx @yarnpkg/sdks vscode"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.77.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5"
+  }
+}
