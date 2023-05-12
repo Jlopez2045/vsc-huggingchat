@@ -2,14 +2,26 @@
   "name": "vsc-huggingchat",
   "displayName": "HuggingChat",
   "description": "",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "JLT",
   "icon": "resources/icon.png",
   "engines": {
     "vscode": "^1.77.0"
   },
   "categories": [
+    "Machine Learning",
+    "Programming Languages",
     "Other"
+  ],
+  "keywords": [
+    "ai",
+    "assistant",
+    "documentation",
+    "chatbot",
+    "copilot",
+    "llama",
+    "huggingface",
+    "find bugs"
   ],
   "activationEvents": [
     "onView:huggingchatView"
